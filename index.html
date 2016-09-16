@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pt">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tópicos Especiais em Engenharia de Software</title>
+
+		<meta name="description" content="US, RN, RF, RI e BDD">
+		<meta name="author" content="Raphael Rodrigues">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/day.css" id="theme">
+
+        <!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2>Tópicos Especiais em Engenharia de Software</h2>
+                    <p>
+                        <small><b>US, RN, RF, RI e BDD</b>
+                        <br><br>
+                            <a href="mailto:emartinenco@gmail.com">Eduardo Martinenco</a><br>
+                            <a href="mailto:leticia.hoffmann@acad.pucrs.br">Letícia Hoffmann</a><br>
+                            <a href="mailto:luciano.almeida@acad.pucrs.br">Luciano Almeida</a><br>
+                            <a href="mailto:raphael.silva.001@acad.pucrs.br">Raphael Rodrigues</a>
+                        </small>
+					</p>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Agenda</h3>
+                        <ul>
+                            <li>User Story</li>
+                            <li>Regras de Negócio</li>
+                            <li>Requisitos Funcionais</li>
+                            <li>Requisitos de Interface</li>
+                            <li>BDD</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                	<section>
+                		<h1>User Story</h1>
+                	</section>
+                    <section>
+                    	User story ou “história de usuário” é uma descrição concisa de uma necessidade do usuário do produto, (ou seja, de um requisito) sob o ponto de vista desse usuário.
+                    </section>
+                    <section>
+                    	A User Story busca descrever a necessidade de uma forma curta, simples e clara.<br><br>
+						Ela é apenas uma promessa de uma conversa, um lembrete de que mais detalhes serão necessários e não deve ser considerados suficientes para a realização do trabalho.
+                    </section>
+                    <section>
+                    	<h3>User Stories possui três aspectos críticos,<br> os chamados três Cs:</h3><br>
+							Cartão<br><br>
+							As conversas<br><br>
+							A confirmação 
+                    </section>
+                    <section>
+                    	<h3>Construindo uma User Story:</h3><br>
+							Ator<br><br>
+							Ação<br><br>
+							Funcionalidades 
+                    </section>
+                    <section>
+                    	<h3>Construindo User Story:</h3>
+                    	<img class="revealCustom" src="http://blog.myscrumhalf.com/wp-content/uploads/2011/10/card5.png">
+                        <br><small>Fonte: http://blog.myscrumhalf.com</small>
+                    </section>
+                    <section>
+                    	<h3>Construindo User Story:</h3>
+                    	<img class="revealCustom" src="http://blog.myscrumhalf.com/wp-content/uploads/2011/10/card23.png">
+                        <br><small>Fonte: http://blog.myscrumhalf.com</small>
+                    </section>
+                </section>
+                
+                <section>
+                	<section>
+                		<h3>Exemplo US</h3>
+                		<img class="revealCustom" src="images/US_example.png">
+                        <br><small>Fonte: http://pt.slideshare.net/manoelp/exemplos-de-user-stories</small>
+                	</section>
+                </section>
+                
+                <section>
+                    <section>
+                    	<h3>Regras de Negócio</h3>
+                    </section>
+                    <section>
+                    	<img class="revealCustom" src="images/rn_list.png">
+                        <br><small>Fonte: http://www.vecteezy.com</small>
+                    </section>
+                    <section>
+                    	As regras de negócios são tipos de requisitos de como os negócios, incluindo suas ferramentas de negócios, devem operar. Podem ser leis e regulamentos impostos ao negócio, mas também expressam a arquitetura e o estilo de negócio escolhidos. 
+                    </section>
+                    <section>
+                    	<h3>Regras de Negócio</h3>
+                    	É uma linguagem "natural", com estruturação semântica precisa, destinada a ser usada, entendida e mantida por pessoas ligadas ao negócio, não por especialistas em TI ou por sistemas e linguagens de programação.
+                    </section>
+                    <section>
+                    	<h3>Regras de Negócio</h3>
+                    	Uma regra de negócio estabelece as condições em que os fatos são válidos, ou as restrições que devem ser observadas no tratamento dos fatos.
+                    </section>
+                    <section>
+                    	<h3>Exemplo</h3><br>
+                    	Um <b>CLIENTE</b> só pode fazer um <b>PEDIDO</b> se tiver seu <b>CRÉDITO APROVADO</b><br><br>
+                    	Note que a regra acima implica na existência de dois fatos: <b>CLIENTE</b> faz <b>PEDIDO</b> e <b>CLIENTE</b> tem <b>CRÉDITO APROVADO</b>
+                    </section>
+                </section>
+
+                <section>
+                	<section>
+                		<h3>Formas de capturar as regras de negócio:</h3><br>
+	                		Baseadas em modelos<br><br>
+	                		Baseadas em documentos
+                	</section>
+                	<section>
+                		<h3>Categorias de regras de negócio:</h3><br>
+                			Regras de limite<br><br>
+                			Regras de derivação
+                	</section>
+                	<section>
+                		<h3>Regras de limite:</h3><br>
+                			Regras de estímulo e resposta<br><br>
+                			Regras de limite de operação<br><br>
+                			Regras de limite de estrutura<br><br>
+                	</section>
+                	<section>
+                		<h3>Regras de derivação:</h3><br>
+                			Regras de conclusão<br><br>
+                			Regras de cálculo
+                	</section>
+                </section>
+
+                <section>
+                	<section>
+                		<h3>Regras de estímulo e resposta</h3>
+                		<img class="revealCustom" src="images/regrasdeestimulo.png">
+                        <br><small>Fonte: http://www.funpar.ufpr.br</small>
+                	</section>
+                	<section>
+                		<h3>Regras de limite de operação</h3>
+                		<img class="revealCustom" src="images/regrasdelimite.png">
+                        <br><small>Fonte: http://www.funpar.ufpr.br</small>
+                	</section>
+                	<section>
+                		<h3>Regras de limite de estrutura</h3>
+                		<img class="revealCustom" src="images/regrasdelimiteEst.png">
+                        <br><small>Fonte: http://www.funpar.ufpr.br</small>
+                	</section>
+                	<section>
+                		<h3>Regras de conclusão</h3>
+                		<img class="revealCustom" src="images/regrasconclusao.png">
+                        <br><small>Fonte: http://www.funpar.ufpr.br</small>
+                	</section>
+                	<section>
+                		<h3>Regras de cálculo</h3>
+                		<img class="revealCustom" src="images/regrascalculo.png">
+                        <br><small>Fonte: http://www.funpar.ufpr.br</small>
+                	</section>
+                </section>
+
+                <section>
+                    <section>
+                    	<h2>Requisitos Funcionais</h2>
+                    </section>
+                    <section>
+                    	Requisitos funcionais são as necessidades apontadas pelo cliente, ou seja, o que ele quer que o sistema faça. Estes requisitos são obtidos durante a etapa de levantamento de requisitos junto ao cliente e demais usuários. A partir disto defini-se uma função de um sistema de software ou seu componente. Uma função é descrita como um conjunto de entradas, seu comportamento e as saídas (envolve cálculos, lógicas de trabalho, manipulação e processamento de dados, entre outros).
+                    </section>
+                    <section>
+                    	Dentro dos requisitos funcionais também encontram-se a arquitetura do aplicativo, diferentemente da arquitetura técnica, que pertence aos requisitos não funcionais.<br><br>
+                    	<b>Exemplos:<br><br></b>
+                    		Gerenciar vendas<br><br>
+                    		Emitir relatórios<br><br>
+                    		Consultar usuários
+                    </section>
+                    <section>
+                    	Muitos autores ainda dividem os requisitos funcionais em três: evidente, escondida e friso.<br><br>
+                    	<ul>
+                    		<li><b>Evidentes:</b> é quando o usuário final do sistema está ciente do que está sendo executado.</li>
+                    		<li><b>Escondida:</b> é quando uma função está sendo feita, mas é invisível ao usuário.</li>
+                    		<li><b>Friso:</b> quando a execução da funcionalidade não afeta outras funções do software.</li>
+                    	</ul><br><br>
+                    	Boa parte da qualidade do software está centrada em atender tais requisitos, uma vez que esse é o comportamento esperado pelo cliente.
+                    </section>
+                </section>
+
+                <section>
+                	<section>
+                		<h3>Exemplo de Requisito Funcional - RF</h3>
+                		<img class="revealCustom" src="images/rf_exemplo.png">
+                        <br><small>Fonte: http://ericlemes.com/2009</small>
+                	</section>
+                	<section>
+                		<h3>Exemplo de Requisito Funcional - RF</h3>
+                		<img class="revealCustom" src="images/rf_exemplo2.png">
+                        <br><small>Fonte: http://ihuru.fe.up.pt</small>
+                	</section>
+                </section>
+
+                <section>
+	                <section>
+	                	<h2>Requisitos de Interface</h2>
+	                </section>
+                    <section>
+                        <h4>Requisitos de Interface</h4>
+                        <img src="images/requisitosinterface.gif"><br>
+                        <small>Fonte: http://image.uisdc.com/</small>
+                    </section>
+	                <section>
+	                	São as regras que determinam formato/aparência de campos, comportamento dos componentes das janelas e outras informações relevantes à interface gráfica.
+	                </section>
+	                <section>
+	                	<h3>Exemplo Requisitos de Interface</h3>
+	                	<b>Layout Sugerido</b><br>
+	                	<img class="revealCustom" src="images/ri_PedidoCompra.png">
+	                </section>
+	                <section>
+	                	<h3>Exemplo Requisitos de Interface</h3>
+	                	<b>Campos</b><br>
+	                	<img src="images/ri_campos.png">
+	                </section>
+                    <section>
+                        <h3>Exemplo Requisitos de Interface</h3>
+                        <b>Navegação Web</b><br>
+                        <img src="https://irp-cdn.multiscreensite.com/751aee3f/dms3rep/multi/desktop/Tendencias-Web-Design-20162-1000x563.gif"><br>
+                        <small>Fonte: www.gmaxweb.com.br</small>
+                    </section>
+                    <section>
+                        <h3>Exemplo Requisitos de Interface</h3>
+                        <b>Navegação Mobile</b><br>
+                        <img class="revealCustom" src="https://lh3.googleusercontent.com/-vmFfkNseDnI/VTCXwsCGWaI/AAAAAAAAAAk/3yT1Rh3AIyc/w800-h800/ui_01.gif"><br>
+                        <small>Fonte: www.gmaxweb.com.br</small>
+                    </section>
+                </section>
+
+                <section>
+                	<section>
+                		<h3>Prototipagem</h3>
+                	</section>
+                	<section>
+                		O uso de prototipagem é feito em diversas fases do processo de engenharia de requisitos. Trata-se de uma versão inicial do sistema, baseada em requisitos ainda pouco definidos, mas que pode ajudar a encontrar desde cedo falhas que através da comunicação verbal não são tão facilmente identificáveis.
+                	</section>
+                	<section>
+                		<img class="revealCustom" src="images/ri_prototipo.jpeg">
+                	</section>
+                	<section>
+                		<img class="revealCustom" src="images/usXux.png">
+                	</section>
+                    <section>
+                        <img src="http://praetzel.com.br/wp-content/uploads/2015/07/Notificacoes-Animadas.gif"><br>
+                        <small>Fonte: inventbordados.blogspot.com</small>
+                    </section>
+                    <section>
+                        <img src="http://49.media.tumblr.com/8d1a4cdcaa96a9270bbe69f90ae69e82/tumblr_npew2aAPVs1u20gk5o1_1280.gif"><br>
+                        <small>Fonte: webanduxdesign.tumblr.com</small>
+                    </section>
+                    <section>
+                        <img src="http://45.media.tumblr.com/cc8b97b52ffc0a79e5aa7f133c06e53a/tumblr_ng9wv271rh1u2u3sho1_1280.gif"><br>
+                        <small>Fonte: materialpatterns.tumblr.com</small>
+                    </section>
+                </section>
+
+                <section>
+	                <section>
+	                	<h2>Behaviour-Driven Development</h2>    
+	                </section>
+	                <section>
+	                	<img class="revealCustom" src="images/bdd.png">
+                        <br><small>Fonte: https://plus.google.com/+Qaworks/</small>
+	                	<br>
+	                	<b>Desenvolvimento Orientado por Comportamento</b><br>
+						Dan North criou o primeiro framework de BDD, em 2006
+	                </section>
+	                <section>
+	                	<h3>O que é?</h3>
+            			<p data-fragment-index="0">BDD é técnica de desenvolvimento ágil que visa integrar regras de negócios com linguagem de programação, focando o comportamento do software;</p><br>
+            			<p data-fragment-index="1" class="sl-block-content fragment">Trata-se de uma evolução do TDD;</p><br>
+            			<p data-fragment-index="2" class="sl-block-content fragment">É uma abordagem de design de software com foco no domínio do software (Domínio nada mais é que do atender completamente um determinado negócio).</p>
+	                </section>
+	                <section>
+	                	<h3>Para que serve?</h3>
+	                </section>
+	                <section>
+	                	Utilizando BDD em apenas um repositório, você mantém os testes de aceite automatizados de uma forma simples de ler para o cliente, desenvolvedores, QAs e demais membros da equipe. Nessa abordagem, a documentação e o código de desenvolvimento evoluem sempre juntos.
+	                </section>
+	            </section>
+
+                <section>
+                    <h3>Camadas BDD</h3>
+                        <img class="revealCustom" src="images/layersbdd.png">
+                        <br><small>Fonte: http://elemarjr.net</small>
+                </section>
+
+	            <section>
+	            	<section>
+		                <h3>Ferramentas</h3>
+		                	<img class="revealCustom" src="images/frameworks.png">
+	                </section>
+	                <section>
+	                	<h3>Sintaxe Gherkin</h3>
+	                		<img class="revealCustom" src="images/bddsyntax.jpg">
+                            <br><small>Fonte: http://pt.slideshare.net/dversaci/behavior-driven-development-bdd-and-agile-testing</small>
+	                </section>
+	                <section>
+	                	  <h3>BDD Cenário</h3>
+                          <img src="https://try.behave.pro/assets/images/product2.gif"><br>
+	                	  <small>Fonte: try.behave.pro</small>
+	                </section>
+	                <section>
+	                	<h3>Cenário em pt</h3>
+	                		<img class="revealCustom" src="images/bddpt.png">
+                            <br><small>Fonte: http://elemarjr.net</small>
+	                </section>
+	            </section>
+
+                <section>
+                	<section>
+                		<h3>Testes ágeis com BDD</h3>
+                	</section>
+                	<section>
+                		<h3>Comparação entre Caso de teste e BDD cenário</h3>
+                		<img class="reveal" src="images/TCeBDD.png">
+                	</section>
+                	<section>
+                		<h3>As razões para os testes tradicionais serem superados pelos testes ágeis</h3>
+                	</section>
+                	<section>
+                		<ul>
+                			<li>Grandes volume de atividade manuais de teste atrasam a entrega;</li>
+                			<li>As equipes só começam a testar quando o sistema tenha sido desenvolvido e integrado;</li>
+                			<li>Um grande bloqueio da entrega no prazo é descobrir no final do ciclo de desenvolvimento que sua aplicação possui grandes problemas de qualidade.</li>
+                		</ul>
+                	</section>
+                </section>
+
+                <section>
+                	<section>
+                		<h2>Case</h2>
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/loginfeature.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/StepsError.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/console.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/semimplementacao.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/classeSteps.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/StepsOK.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/projeto-testes-inteiro.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/cucumberReport3.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/cucumberReport4.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/cucumberReport1.png">
+                	</section>
+                	<section>
+                		<img class="reveal" src="images/cucumberReport2.png">
+                	</section>
+                </section>
+
+                <section>
+                	<h3>Referência</h3>
+                	<small>
+                	http://blog.myscrumhalf.com/2011/10/user-stories-o-que-sao-como-usar/<br>
+					http://arquiteturadeinformacao.com/user-experience/como-criar-uma-user-story/<br>
+					https://extreme-programming-mds.googlecode.com/files/user_stories.pdf<br>
+					http://www.knowledge21.com.br/<br>sobreagilidade/user-stories/o-que-e-user-story/<br>
+                	http://eduardopires.net.br/2012/06/ddd-tdd-bdd/<br>
+					http://www.bugbang.com.br/entendendo-bdd-com-cucumber-parte-i/<br>
+					http://dannorth.net/whats-in-a-story/<br>
+					https://pt.wikipedia.org/wiki/Behavior_Driven_Development<br>
+					http://henriqueluz.com.br/2012/05/05/as-vantagens-do-bdd-em-times-ageis/<br>
+					http://www.infoq.com/br/news/2014/07/desenvolvimento-agil-testes<br>
+					http://raphaelrodrigs.github.io/learnbdd/#/<br>
+					http://blog.makesys.com.br/definindo-seu-software-o-que-sao-requisitos-funcionais-e-nao-funcionais<br>
+					http://www.profissionaisti.com.br/2013/02/a-importancia-dos-requisitos-nao-funcionais/<br>
+					http://www.cin.ufpe.br/~gta/rup-vc/extend.bus_model/guidances/guidelines/business_rules_E6E7173.html<br>
+					http://www.centus.com.br/base-de-conhecimento/artigos/definindoregrasdenegocio<br>
+					</small>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+                slideNumber: true,
+				history: false,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+                // parallaxBackgroundImage: 'images/reveal-parallax-6.jpg',
+				// parallaxBackgroundSize: '2200px 1173px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
